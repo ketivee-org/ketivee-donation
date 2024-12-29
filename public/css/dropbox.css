@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #C09FF5;
+    color: #333;
+    text-align: center;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.drop-box {
+    border: 2px dashed #000000;
+    border-radius: 10px;
+    background: #7c4dff71;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    cursor: pointer;
+}
+
+.drop-box:hover {
+    background: #3064c579;
+}
+
+.drop-box p {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+.preview-window {
+    margin-top: 20px;
+}
+
+.horizontal-preview {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px; /* Space between items */
+    padding: 10px;
+}
+
+.horizontal-preview img,
+.horizontal-preview video,
+.horizontal-preview audio {
+    max-height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+}
+
+.horizontal-preview p {
+    display: inline-block;
+    max-width: 150px;
+    text-align: center;
+}
+
+
+.file-list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.file-list li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #4e0db654;
+}
+
+
+
+button {
+    background: #6910b19c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #9442b4;
+}

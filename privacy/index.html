@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Ketivee</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Ketivee Privacy Policy">
+
+</head>
+
+<body>
+    <header>
+        <h1>Ketivee Privacy Policy</h1>
+        <button id="menu-toggle" title="Toggle Menu">☰</button>
+    </header>
+    <button id="theme-toggle" title="Toggle Theme">🌒</button>
+
+    <!-- Side Menu -->
+    <aside class="hidden">
+        <h3>Sections</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li><a href="#policy-intro">Introduction</a></li>
+            <li><a href="#data-security">Data Security</a></li>
+            <li><a href="#donated-data">Donated Data</a></li>
+            <li><a href="#data-usage">Data Usage</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+    </aside>
+    <!-- Main Content -->
+    <main style="flex: 1; padding: 20px;">
+        <section id="policy-intro">
+            <h3>Introduction</h3>
+            <p>
+                We value your trust at Ketivee. We want to assure you that your data is safe, secure, and handled with
+                the utmost transparency. We strictly adhere to ethical data practices, and our Privacy Policy is
+                designed to ensure that your data is always protected.
+            </p>
+        </section>
+        <hr>
+
+        <section id="data-security">
+            <h3>Data Security</h3>
+            <p>
+                Ketivee is committed to protecting your privacy and ensuring the security of your data. We do not sell
+                or share any data with third parties. All data donated to us is encrypted and stored securely, ensuring
+                complete safety. Ketivee does not read or access your personal data without your explicit permission. We
+                understand that privacy is important to you, and we are committed to safeguarding it..
+            </p>
+        </section>
+        <hr>
+
+        <section id="donated-data">
+            <h3>Donated Data</h3>
+            <p>Any data donated to us for the SarthiAI project is used solely for improving our AI models. We are
+                committed to maintaining your privacy while advancing our technology for the benefit of everyone. This
+                commitment means that we will never share your personal data with any third party, including advertisers
+                and analytics providers. We will also never use your personal data to train or develop our AI models.
+                Instead, we will use anonymized and aggregated data to train our models and develop new AI applications.
+                Your privacy is important to us, and we are committed to protecting it. By donating your data to the
+                SarthiAI project, you are helping us to develop AI applications that can improve the lives of everyone.
+            </p>
+        </section>
+        <hr>
+
+        <section id="data-usage">
+            <h3>Data Usage</h3>
+            <p>
+                Your privacy matter for us, At Ketivee, your data is yours—always. We never use your information for advertising or marketing
+                purposes. Transparency is at the core of everything we do, with all our processes being open and
+                accessible.
+
+                If you have any questions about how we handle your data, please reach out. We're here to ensure you have
+                full control and confidence in your experience with us.
+            </p>
+        </section>
+        <hr>
+
+        <section id="contact-us">
+            <h3>Contact Us</h3>
+            <p>
+                For any concerns or questions, you can contact us at:
+            </p>
+            <ul>
+                <li>Email: <a href="mailto:support@ketivee.com">support@ketivee.com</a></li>
+                <li>Website: <a href="https://ketivee.com">https://ketivee.com</a></li>
+                <li>GitHub: <a href="https://github.com/ketivee-org">https://github.com/ketivee-org</a></li>
+            </ul>
+            <img src="contact_us.svg" alt="Contact Us" class="ai-image">
+            <a href="https://donation.ketivee.com"><button>Take me back</button> </a>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Ketivee | <a href="https://github.com/ketivee-org">GitHub</a> | Empowering Creators with AI
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+
+        // Set default theme to dark
+        body.classList.add('dark-mode');
+        themeToggle.textContent = '☀️';
+
+        // Theme Toggle Functionality
+        themeToggle.addEventListener('click', () => {
+            const isDarkMode = body.classList.toggle('dark-mode');
+            themeToggle.textContent = isDarkMode ? '☀️' : '🌒';
+        });
+
+        // Smooth Scrolling for Side Menu Links
+        document.querySelectorAll("aside ul li a").forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            });
+
+            // Toggle Side Menu
+            const menuToggle = document.getElementById("menu-toggle");
+            const sideMenu = document.querySelector("aside");
+
+            menuToggle.addEventListener("click", () => {
+                sideMenu.classList.toggle("shown");
+                sideMenu.classList.toggle("hidden");
+            });
+
+        });
+    </script>
+</body>
+
+</html>
