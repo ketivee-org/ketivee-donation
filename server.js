@@ -17,6 +17,7 @@ const bodyParser = require('body-parser');
 const File = require('./models/file');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const router = express.Router();
+const dbConnection = require('./config/db');
 
 dotenv.config();
 
@@ -39,10 +40,22 @@ app.use(morgan('combined', { stream: accessLogStream }));
 app.use(morgan('dev'));
 
 // MongoDB connection
-const Connection = require('./config/db')
 dbConnection();
 // Multer storage configuration for file uploads// Configure session
 authConfig(app);
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET || 'defaultsecret',
+        resave: false,
+        saveUninitialized: false,
+    })
+);
+
+app.use((req, res, next) => {
+    console.log(`User: ${req.user}`);
+    next();
+});
+
 
 // Multer storage configuration for file uploads
 const storage = multer.diskStorage({
