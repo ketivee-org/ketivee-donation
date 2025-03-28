@@ -9,7 +9,7 @@ Welcome to the official donation platform for Ketivee! Your support helps us con
 ## 🚀 How to Donate
 
 ### Quick Donation Buttons
-[![Donate with PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)](https://paypal.me/ketivee)
+[![Donate with PayPal](https://img.shields.io/badge/PayPal-Donate-blue?logo=paypal)](https://paypal.me/unbrakegamerz)
 [![Donate with Crypto](https://img.shields.io/badge/Crypto-Donate-orange?logo=bitcoin)](https://ketivee.org/crypto-donate)
 [![Sponsor on GitHub](https://img.shields.io/badge/GitHub-Sponsor-white?logo=github)](https://github.com/sponsors/ketivee-org)
 
